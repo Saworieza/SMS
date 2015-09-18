@@ -1,0 +1,85 @@
+<%= form_for(@teacher) do |f| %>
+  <% if @teacher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
+
+      <ul>
+      <% @teacher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :employer %><br>
+    <%= f.text_field :employer %>
+  </div>
+  <div class="field">
+    <%= f.label :employee_number %><br>
+    <%= f.text_field :employee_number %>
+  </div>
+  <div class="field">
+    <%= f.label :employment_date %><br>
+    <%= f.date_select :employment_date %>
+  </div>
+  <div class="field">
+    <%= f.label :birthdate %><br>
+    <%= f.date_select :birthdate %>
+  </div>
+  <div class="field">
+    <%= f.label :marital_status %><br>
+    <%= f.text_field :marital_status %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :home_address %><br>
+    <%= f.text_field :home_address %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_1 %><br>
+    <%= f.number_field :phone_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_2 %><br>
+    <%= f.number_field :phone_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :town %><br>
+    <%= f.text_field :town %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br>
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :education %><br>
+    <%= f.text_area :education %>
+  </div>
+  <div class="field">
+    <%= f.label :certifications %><br>
+    <%= f.text_area :certifications %>
+  </div>
+  <div class="field">
+    <%= f.label :subjects %><br>
+    <%= f.text_area :subjects %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

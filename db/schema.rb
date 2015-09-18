@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918112036) do
+ActiveRecord::Schema.define(version: 20150918124840) do
 
   create_table "classrooms", force: :cascade do |t|
     t.string   "form"
@@ -71,12 +71,55 @@ ActiveRecord::Schema.define(version: 20150918112036) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "students", force: :cascade do |t|
+    t.string   "fullname"
+    t.date     "birthdate"
+    t.string   "gender"
+    t.string   "nationality"
+    t.string   "form"
+    t.string   "stream"
+    t.string   "class_teacher"
+    t.string   "address"
+    t.integer  "phone_1"
+    t.integer  "phone_2"
+    t.string   "email"
+    t.string   "town"
+    t.string   "county"
+    t.string   "image"
+    t.string   "adm_no"
+    t.string   "adm_date"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.string   "priority"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string   "fullname"
+    t.string   "employer"
+    t.string   "employee_number"
+    t.date     "employment_date"
+    t.date     "birthdate"
+    t.string   "marital_status"
+    t.string   "nationality"
+    t.string   "home_address"
+    t.integer  "phone_1"
+    t.integer  "phone_2"
+    t.string   "email"
+    t.string   "town"
+    t.string   "county"
+    t.text     "education"
+    t.text     "certifications"
+    t.text     "subjects"
+    t.string   "image"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|
