@@ -41,3 +41,7 @@ to a list of done tasks which is only visible to the person who created it.
 
 classrooms has a field for class teacher. fill that in withinformation from teachers model
 it also has a field for class and stream. create separate models for the class and stream so as to ease creation.
+
+Download school management software for secondary schools in Kenya which is also compatible with 
+mayby other countries, high schools and primary schools with discipiline, finance, fees, part payments, 
+report cards and grades.
