@@ -34,3 +34,10 @@ TO DOS
 
 LESSONS
 <%= link_to "link text...", parent_child_path(@parent, @child) %>
+
+NOTES EXTRA
+The priorities to be color coded and marked as done or not done for the tasks. once a task is done its added 
+to a list of done tasks which is only visible to the person who created it.
+
+classrooms has a field for class teacher. fill that in withinformation from teachers model
+it also has a field for class and stream. create separate models for the class and stream so as to ease creation.
