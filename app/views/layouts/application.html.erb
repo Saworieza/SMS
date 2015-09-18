@@ -15,6 +15,11 @@
 			<!-- to determine real nav location later-->
 			<%= link_to 'Students', students_path %><!-- parents?-->
 			<%= link_to 'Teachers', teachers_path %><!-- teachers?-->
+			
+			<!-- link to admit students. its just the new student form anyway -->
+			<%= link_to 'Admit Student', new_student_path %><!-- Admin and Allowed Teachers -->
+			<%= link_to 'Add teacher', new_teacher_path %><!--Admin only-->
+			
 			<%= render 'layouts/teachers_nav' %>
 			<%= render 'layouts/parents_nav' %>
 			<%= render 'layouts/accounts_nav' %>
