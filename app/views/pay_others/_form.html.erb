@@ -1,0 +1,53 @@
+<%= form_for(@pay_other) do |f| %>
+  <% if @pay_other.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pay_other.errors.count, "error") %> prohibited this pay_other from being saved:</h2>
+
+      <ul>
+      <% @pay_other.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_name %><br>
+    <%= f.text_field :student_name %>
+  </div>
+  <div class="field">
+    <%= f.label :adm_no %><br>
+    <%= f.number_field :adm_no %>
+  </div>
+  <div class="field">
+    <%= f.label :form %><br>
+    <%= f.number_field :form %>
+  </div>
+  <div class="field">
+    <%= f.label :stream %><br>
+    <%= f.text_field :stream %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_for %><br>
+    <%= f.text_field :payment_for %>
+  </div>
+  <div class="field">
+    <%= f.label :paid_by %><br>
+    <%= f.text_field :paid_by %>
+  </div>
+  <div class="field">
+    <%= f.label :pay_method %><br>
+    <%= f.text_field :pay_method %>
+  </div>
+  <div class="field">
+    <%= f.label :references %><br>
+    <%= f.text_field :references %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

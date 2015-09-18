@@ -1,0 +1,36 @@
+GITHUB
+Push to github
+added sign in and sign up and created the links
+created the following tables pay fees, pay other, events,classrooms, disciplines
+
+
+TO DOS
+create home page
+redirect route to home page
+install twitter bootstrap, devise
+change database files to work with postgres
+
+export to excel
+import from excel
+image uploading
+file relations
+fields in form A showing in form b etc
+automatic updating of fields depending on entry in one field
+
+tables
+fees -2
+admission -1 (sign up basically)
+discipline
+tasks
+
+
+chat
+mailing
+notifications
+
+FIGURE OUTS
+
+TO DOS
+
+LESSONS
+<%= link_to "link text...", parent_child_path(@parent, @child) %>

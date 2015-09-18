@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Incident:</strong>
+  <%= @discipline.incident %>
+</p>
+
+<p>
+  <strong>Incident date:</strong>
+  <%= @discipline.incident_date %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @discipline.student %>
+</p>
+
+<p>
+  <strong>Adm no:</strong>
+  <%= @discipline.adm_no %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @discipline.form %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @discipline.details %>
+</p>
+
+<p>
+  <strong>Action taken:</strong>
+  <%= @discipline.action_taken %>
+</p>
+
+<p>
+  <strong>Email subject:</strong>
+  <%= @discipline.email_subject %>
+</p>
+
+<p>
+  <strong>Email message:</strong>
+  <%= @discipline.email_message %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @discipline.email_address %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @discipline.references %>
+</p>
+
+<%= link_to 'Edit', edit_discipline_path(@discipline) %> |
+<%= link_to 'Back', disciplines_path %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pay Others</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student name</th>
+      <th>Adm no</th>
+      <th>Form</th>
+      <th>Stream</th>
+      <th>Amount</th>
+      <th>Payment for</th>
+      <th>Paid by</th>
+      <th>Pay method</th>
+      <th>References</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pay_others.each do |pay_other| %>
+      <tr>
+        <td><%= pay_other.student_name %></td>
+        <td><%= pay_other.adm_no %></td>
+        <td><%= pay_other.form %></td>
+        <td><%= pay_other.stream %></td>
+        <td><%= pay_other.amount %></td>
+        <td><%= pay_other.payment_for %></td>
+        <td><%= pay_other.paid_by %></td>
+        <td><%= pay_other.pay_method %></td>
+        <td><%= pay_other.references %></td>
+        <td><%= link_to 'Show', pay_other %></td>
+        <td><%= link_to 'Edit', edit_pay_other_path(pay_other) %></td>
+        <td><%= link_to 'Destroy', pay_other, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pay other', new_pay_other_path %>

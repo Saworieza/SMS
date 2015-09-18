@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student name:</strong>
+  <%= @pay_other.student_name %>
+</p>
+
+<p>
+  <strong>Adm no:</strong>
+  <%= @pay_other.adm_no %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @pay_other.form %>
+</p>
+
+<p>
+  <strong>Stream:</strong>
+  <%= @pay_other.stream %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @pay_other.amount %>
+</p>
+
+<p>
+  <strong>Payment for:</strong>
+  <%= @pay_other.payment_for %>
+</p>
+
+<p>
+  <strong>Paid by:</strong>
+  <%= @pay_other.paid_by %>
+</p>
+
+<p>
+  <strong>Pay method:</strong>
+  <%= @pay_other.pay_method %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @pay_other.references %>
+</p>
+
+<%= link_to 'Edit', edit_pay_other_path(@pay_other) %> |
+<%= link_to 'Back', pay_others_path %>
