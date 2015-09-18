@@ -12,6 +12,9 @@
 		<%= link_to 'Home', root_path %>
 		<% if user_signed_in? %>
 			<%= link_to 'Events', events_path %>
+			<!-- to determine real nav location later-->
+			<%= link_to 'Students', students_path %><!-- parents?-->
+			<%= link_to 'Teachers', teachers_path %><!-- teachers?-->
 			<%= render 'layouts/teachers_nav' %>
 			<%= render 'layouts/parents_nav' %>
 			<%= render 'layouts/accounts_nav' %>
