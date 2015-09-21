@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :dormitories
+  resources :subjects
+  resources :library_books
+  resources :subjects
   get 'users/index'
 
   resources :students

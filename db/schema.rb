@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150921120710) do
+ActiveRecord::Schema.define(version: 20150921143734) do
 
   create_table "classrooms", force: :cascade do |t|
     t.string   "form"
@@ -37,11 +37,31 @@ ActiveRecord::Schema.define(version: 20150921120710) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "dormitories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "matron"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "library_books", force: :cascade do |t|
+    t.string   "name"
+    t.string   "author"
+    t.text     "description"
+    t.string   "publisher"
+    t.string   "isbn"
+    t.string   "class"
+    t.string   "status"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -90,6 +110,14 @@ ActiveRecord::Schema.define(version: 20150921120710) do
     t.string   "adm_date"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "class"
+    t.string   "teacher"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tasks", force: :cascade do |t|

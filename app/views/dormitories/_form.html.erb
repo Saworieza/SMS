@@ -1,0 +1,29 @@
+<%= form_for(@dormitory) do |f| %>
+  <% if @dormitory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dormitory.errors.count, "error") %> prohibited this dormitory from being saved:</h2>
+
+      <ul>
+      <% @dormitory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :matron %><br>
+    <%= f.text_field :matron %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
