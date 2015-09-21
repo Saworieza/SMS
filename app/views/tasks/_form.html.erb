@@ -23,6 +23,28 @@
     <%= f.label :priority %><br>
     <%= f.text_field :priority %>
   </div>
+  
+  <!-- New fields arrange later-->
+  <div class="field">
+    <%= f.label :Due_date %><br>
+    <%=  f.date_select :dueDate %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :assigned_to %><br>
+    <%= f.text_field :assignedTo %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :attachment %><br>
+    <%= f.text_field :attachment %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

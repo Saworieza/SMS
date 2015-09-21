@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918124840) do
+ActiveRecord::Schema.define(version: 20150921120710) do
 
   create_table "classrooms", force: :cascade do |t|
     t.string   "form"
@@ -98,6 +98,10 @@ ActiveRecord::Schema.define(version: 20150918124840) do
     t.string   "priority"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.date     "dueDate"
+    t.string   "assignedTo"
+    t.string   "state"
+    t.string   "attachment"
   end
 
   create_table "teachers", force: :cascade do |t|

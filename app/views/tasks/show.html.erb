@@ -15,5 +15,10 @@
   <%= @task.priority %>
 </p>
 
+<p><strong>Due Date:</strong><%= @task.dueDate %></p>
+<p><strong>Assigned To:</strong><%= @task.assignedTo %></p>
+<p><strong>State:</strong><%= @task.state %></p>
+<p><strong>Attachment:</strong><%= @task.attachment %></p>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>

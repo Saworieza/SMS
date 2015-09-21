@@ -8,6 +8,10 @@
       <th>Title</th>
       <th>Description</th>
       <th>Priority</th>
+      <th>Due Date</th>
+      <th>Assigned To</th>
+      <th>State</th>
+      <th>Attachment</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +22,12 @@
         <td><%= task.title %></td>
         <td><%= task.description %></td>
         <td><%= task.priority %></td>
+        
+        <td><%= task.dueDate %></td>
+        <td><%= task.assignedTo %></td>
+        <td><%= task.state %></td>
+        <td><%= task.attachment %></td>
+        
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
