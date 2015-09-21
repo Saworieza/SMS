@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'library/index'
+
   resources :dormitories
   resources :subjects
   resources :library_books

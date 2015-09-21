@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <h4>Status Reports</h4>
+            <%= link_to "Lost Books" %><br><!-- self explanatory. add the following fields, lost dates, who, replaced{which removes it from here to a replaced section}-->
+            <%= link_to "Frequent Borrowers" %><br><!-- self explanatory -->
+            <%= link_to "Book Statistics" %><!-- books by numbers, lost, lent, spoilt, availability by title and class etc-->
+        </div>
+         <div class="col-lg-4">
+             <h4>Lending</h4>
+            <%= link_to "Lend Book" %><br>
+            <%= link_to "Books Lent Out" %><!-- self explanatory -->
+        </div>
+        <div class="col-lg-4">
+            <h4>Book Additions</h4>
+            <%= link_to "Add Books", new_library_book_path %><br>
+            <%= link_to "Replace Book" %><!-- for librarian to replace a lost book being returned by a student-->
+        </div>
+    </div>
+</div>
