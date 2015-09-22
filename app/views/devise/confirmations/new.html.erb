@@ -4,9 +4,10 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %> 
-  </div>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+    <%#= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %> 
+ </div>
 
   <div class="actions">
     <%= f.submit "Resend confirmation instructions" %>
