@@ -41,7 +41,7 @@
         <td><%= student.email %></td>
         <td><%= student.town %></td>
         <td><%= student.county %></td>
-        <td><%= student.image %></td>
+        <td><%= image_tag student.image.url(:thumb) %></td>
         <td><%= student.adm_no %></td>
         <td><%= student.adm_date %></td>
         <td><%= link_to 'Show', student %></td>

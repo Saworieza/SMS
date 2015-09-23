@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150923174826) do
+ActiveRecord::Schema.define(version: 20150923223450) do
 
   create_table "classrooms", force: :cascade do |t|
     t.string   "form"
@@ -127,8 +127,12 @@ ActiveRecord::Schema.define(version: 20150923174826) do
     t.string   "image"
     t.string   "adm_no"
     t.string   "adm_date"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -169,8 +173,12 @@ ActiveRecord::Schema.define(version: 20150923174826) do
     t.text     "certifications"
     t.text     "subjects"
     t.string   "image"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
