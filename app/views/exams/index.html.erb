@@ -1,0 +1,75 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-12">
+          <h5><%= link_to 'Add an Exam', new_exam_path %></h5>
+        </div>
+        
+        <div class="col-lg-6">
+          <h3> Exams</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Note</th>
+                <th>Class</th>
+                <th>Term</th>
+                <th>Passmark</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+          
+            <tbody>
+              <% @exams.each do |exam| %>
+                <tr>
+                  <td><%= exam.name %></td>
+                  <td><%= exam.start_date %></td>
+                  <td><%= exam.end_date %></td>
+                  <td><%= exam.note %></td>
+                  <td><%= exam.class %></td>
+                  <td><%= exam.term %></td>
+                  <td><%= exam.passmark %></td>
+                  <td><%= link_to 'Show', exam %></td>
+                  <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
+                  <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="col-lg-4">
+            <!-- shows you the last exams done by these classes. only visible to teachers and admin.-->
+             <h5> Last Exams By Classes</h5>
+              <%= link_to 'Form One' %> <br>
+              <%= link_to 'Form Two' %><br>
+              <%= link_to 'Form Three' %><br>
+              <%= link_to 'Form Four' %>
+          </div>
+          <div class="col-lg-4">
+            <!-- Asks you to select class , term and year that you would like to see. By default it goes to the latest for all the above-->
+             <h5> Exams By Terms</h5>
+             <%= link_to 'Term One' %><br>
+             <%= link_to 'Term Two' %><br>
+             <%= link_to 'Term Three' %>
+          </div>
+          <div class="col-lg-4">
+            <!-- not quite sure about this modele. Note: I am coding tired after a long day-->
+             <h5> Exams By Year</h5>
+             <%= link_to '2020' %><br>
+             <%= link_to '2021' %><br>
+             <%= link_to '2022' %>
+          </div>
+         
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- container-->
+  

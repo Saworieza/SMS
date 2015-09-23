@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @exam.name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @exam.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @exam.end_date %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @exam.note %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @exam.class %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @exam.term %>
+</p>
+
+<p>
+  <strong>Passmark:</strong>
+  <%= @exam.passmark %>
+</p>
+
+<%= link_to 'Edit', edit_exam_path(@exam) %> |
+<%= link_to 'Back', exams_path %>

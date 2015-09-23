@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :departments
+  resources :exams
   get 'library/index'
 
   resources :dormitories
