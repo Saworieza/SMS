@@ -75,6 +75,16 @@
     <%= f.label :adm_date %><br>
     <%= f.text_field :adm_date %>
   </div>
+  
+  
+  <div class="field">
+    <%= f.label :Stream %><br>
+    <%= f.select :fullname, options_from_collection_for_select(@classrooms,"id",'stream' ), {},{} %>
+    
+    <!--#options_from_collection_for_select(@people, 'id', 'name')
+#=> <option value="#{person.id}">#{person.name}</option>-->
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

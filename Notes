@@ -5,10 +5,7 @@ created the following tables pay fees, pay other, events,classrooms, disciplines
 
 
 TO DOS
-create home page
-redirect route to home page
-install twitter bootstrap, devise
-change database files to work with postgres
+see keep.google.com
 
 export to excel
 import from excel
@@ -47,3 +44,7 @@ mayby other countries, high schools and primary schools with discipiline, financ
 report cards and grades.
 
 You asked, We listened. You can now print Principal's Messages on the report cards, quickly switch between marks and points, show raw marks, show assignments and more- Great control and flexibility.
+
+
+
+ <%= f.select :fullname, options_from_collection_for_select(@classrooms,"id",'stream' ), {},{} %>
