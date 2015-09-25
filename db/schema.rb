@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924164843) do
+ActiveRecord::Schema.define(version: 20150925164704) do
 
   create_table "classrooms", force: :cascade do |t|
     t.string   "form"
@@ -133,7 +133,7 @@ ActiveRecord::Schema.define(version: 20150924164843) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.integer  "Classroom_Id"
+    t.integer  "classroom_id"
   end
 
   create_table "subjects", force: :cascade do |t|

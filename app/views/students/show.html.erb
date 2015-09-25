@@ -82,5 +82,10 @@
   <%= @student.adm_date %>
 </p>
 
+<p>
+  <strong>Stream:</strong>
+  <%= @student.classroom.stream %>
+</p>
+
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
