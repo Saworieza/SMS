@@ -15,6 +15,7 @@ class ClassroomsController < ApplicationController
   # GET /classrooms/new
   def new
     @classroom = Classroom.new
+    @streams = Stream.all
   end
 
   # GET /classrooms/1/edit
@@ -69,6 +70,6 @@ class ClassroomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classroom_params
-      params.require(:classroom).permit(:form, :stream, :classteacher, :references, :year)
+      params.require(:classroom).permit(:teacher, :year, :stream_id)
     end
 end

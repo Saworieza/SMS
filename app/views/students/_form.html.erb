@@ -81,7 +81,7 @@
   
   <div class="field">
     <%= f.label :Stream %><br>
-    <%= f.select :classroom_id, Classroom.all.map {|c| [c.stream, c.id]} %>
+    <%= f.select :classroom_id, Classroom.all.map {|c| [c.teacher, c.id]} %>
     
     <%#= f.select("Stream", "classroom_id", Classroom.all.collect {|c| [ c.stream, c.id ] }, {prompt: 'Select Stream'})%>
     <!--#options_from_collection_for_select(@people, 'id', 'name')

@@ -18,7 +18,7 @@ class ClassroomsControllerTest < ActionController::TestCase
 
   test "should create classroom" do
     assert_difference('Classroom.count') do
-      post :create, classroom: { classteacher: @classroom.classteacher, form: @classroom.form, references: @classroom.references, stream: @classroom.stream }
+      post :create, classroom: { teacher: @classroom.teacher, year: @classroom.year }
     end
 
     assert_redirected_to classroom_path(assigns(:classroom))
@@ -35,7 +35,7 @@ class ClassroomsControllerTest < ActionController::TestCase
   end
 
   test "should update classroom" do
-    patch :update, id: @classroom, classroom: { classteacher: @classroom.classteacher, form: @classroom.form, references: @classroom.references, stream: @classroom.stream }
+    patch :update, id: @classroom, classroom: { teacher: @classroom.teacher, year: @classroom.year }
     assert_redirected_to classroom_path(assigns(:classroom))
   end
 

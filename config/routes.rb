@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :classrooms
+  resources :streams
   resources :departments
   resources :exams
   get 'library/index'
@@ -14,7 +16,6 @@ Rails.application.routes.draw do
   get 'fees/index'
 
   resources :disciplines
-  resources :classrooms
   resources :events
   resources :pay_fees
   resources :pay_others
