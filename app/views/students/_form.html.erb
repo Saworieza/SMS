@@ -12,9 +12,13 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :fullname %><br>
+    <%= f.label :surname %><br>
+    <%= f.text_field :surname %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Other_names %><br>
     <%= f.text_field :fullname %>
   </div>
   <div class="field">
@@ -29,7 +33,8 @@
     <%= f.label :nationality %><br>
     <%= f.text_field :nationality %>
   </div>
-  <div class="field">
+  
+  <!--<div class="field"> ### Redundant fields. remove from schema please ###
     <%= f.label :form %><br>
     <%= f.text_field :form %>
   </div>
@@ -40,11 +45,26 @@
   <div class="field">
     <%= f.label :class_teacher %><br>
     <%= f.text_field :class_teacher %>
-  </div>
+  </div>-->
+  
   <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
+  
+  <div class="field">
+    <%= f.label :father %><br>
+    <%= f.text_field :father %>
+  </div>
+  <div class="field">
+    <%= f.label :mother %><br>
+    <%= f.text_field :mother %>
+  </div>
+  <div class="field">
+    <%= f.label :guardian %><br>
+    <%= f.text_field :guardian %>
+  </div>
+  
   <div class="field">
     <%= f.label :phone_1 %><br>
     <%= f.number_field :phone_1 %>
@@ -80,12 +100,13 @@
   
   
   <div class="field">
+    <%= f.label :Form %><br>
+    <%= f.select :classroom_id, Classroom.all.map {|c| [c.number, c.id]} %>
+  </div>
+  
+  <div class="field">
     <%= f.label :Stream %><br>
-    <%= f.select :classroom_id, Classroom.all.map {|c| [c.teacher, c.id]} %>
-    
-    <%#= f.select("Stream", "classroom_id", Classroom.all.collect {|c| [ c.stream, c.id ] }, {prompt: 'Select Stream'})%>
-    <!--#options_from_collection_for_select(@people, 'id', 'name')
-#=> <option value="#{person.id}">#{person.name}</option>-->
+    <%= f.select :stream_id, Stream.all.map {|s| [s.name, s.id]} %>
   </div>
   
   <div class="actions">

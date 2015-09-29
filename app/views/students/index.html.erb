@@ -29,6 +29,7 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
+        <td><%= student.surname %></td>
         <td><%= student.fullname %></td>
         <td><%= student.birthdate %></td>
         <td><%= student.gender %></td>
@@ -37,6 +38,9 @@
         <td><%= student.stream %></td>
         <td><%= student.class_teacher %></td>
         <td><%= student.address %></td>
+        <td><%= student.father %></td>
+        <td><%= student.mother %></td>
+        <td><%= student.guardian %></td>
         <td><%= student.phone_1 %></td>
         <td><%= student.phone_2 %></td>
         <td><%= student.email %></td>
@@ -45,7 +49,7 @@
         <td><%= image_tag student.image.url(:thumb) %></td>
         <td><%= student.adm_no %></td>
         <td><%= student.adm_date %></td>
-        <td><%= student.classroom.teacher %></td>
+        <td><%= student.classroom.number %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

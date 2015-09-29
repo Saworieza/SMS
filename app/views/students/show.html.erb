@@ -22,7 +22,7 @@
   <%= @student.nationality %>
 </p>
 
-<p>
+<!--<p>
   <strong>Form:</strong>
   <%= @student.form %>
 </p>
@@ -35,6 +35,21 @@
 <p>
   <strong>Class teacher:</strong>
   <%= @student.class_teacher %>
+</p>-->
+
+<p>
+  <strong>Father:</strong>
+  <%= @student.father %>
+</p>
+
+<p>
+  <strong>Mother:</strong>
+  <%= @student.mother %>
+</p>
+
+<p>
+  <strong>Guardian:</strong>
+  <%= @student.guardian %>
 </p>
 
 <p>
@@ -83,8 +98,12 @@
 </p>
 
 <p>
+  <strong>Class:</strong>
+  <%= @student.classroom.number %>
+</p>
+<p>
   <strong>Stream:</strong>
-  <%= @student.classroom.teacher %>
+  <%= @student.stream.name %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

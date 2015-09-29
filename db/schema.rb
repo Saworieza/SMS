@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925195121) do
+ActiveRecord::Schema.define(version: 20150929162554) do
 
   create_table "classrooms", force: :cascade do |t|
-    t.string   "teacher"
+    t.integer  "number"
     t.date     "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 20150925195121) do
     t.integer  "classroom_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "teacher_id"
   end
 
   add_index "streams", ["classroom_id"], name: "index_streams_on_classroom_id"
@@ -142,6 +143,11 @@ ActiveRecord::Schema.define(version: 20150925195121) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "classroom_id"
+    t.integer  "stream_id"
+    t.string   "surname"
+    t.string   "father"
+    t.string   "mother"
+    t.string   "guardian"
   end
 
   create_table "subjects", force: :cascade do |t|

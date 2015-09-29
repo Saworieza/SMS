@@ -15,9 +15,13 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+   <div class="field">
+    <%= f.label :Class_teacher %><br><!-- select this from teachers. Dont forget to update the controller for this new field-->
+    <%= f.select :teacher_id, Teacher.all.map {|t| [t.fullname, t.id]} %>
+  </div>
   <div class="field">
-    <%= f.label :Class_Teacher %><br><!-- select this from teachers. Dont forget to update the controller for this new field-->
-    <%= f.select :classroom_id, Classroom.all.map {|c| [c.teacher, c.id]} %>
+    <%= f.label :Form %><br><!-- select this from teachers. Dont forget to update the controller for this new field-->
+    <%= f.select :classroom_id, Classroom.all.map {|c| [c.number, c.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

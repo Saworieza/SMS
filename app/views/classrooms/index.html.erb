@@ -1,29 +1,66 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Classrooms</h1>
-
-<table>
+<div class="column">
+  <div class="row">
+    <div class="col-lg-12">
+      <p id="notice"><%= notice %></p>
+    </div>
+    <div class="col-lg-8">
+      <h3>Classes</h3>
+      <%= link_to 'New Classroom', new_classroom_path %>
+        <table>
+          <thead>
+            <tr>
+              <th>number</th>
+              <th>Year</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @classrooms.each do |classroom| %>
+              <tr>
+                <td><%= classroom.number %></td>
+                <td><%= classroom.year %></td>
+                <td><%= link_to 'Show', classroom %></td>
+                <td><%= link_to 'Edit', edit_classroom_path(classroom) %></td>
+                <td><%= link_to 'Destroy', classroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+    <div class="col-lg-4">
+      <h3>Listing All Streams</h3>
+      <%= link_to 'Add a Stream', new_stream_path %>
+      <table>
   <thead>
     <tr>
-      <th>Teacher</th>
-      <th>Year</th>
+      <th>Name</th>
+      <th>Classroom</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @classrooms.each do |classroom| %>
+    <% @streams.each do |stream| %>
       <tr>
-        <td><%= classroom.teacher %></td>
-        <td><%= classroom.year %></td>
-        <td><%= link_to 'Show', classroom %></td>
-        <td><%= link_to 'Edit', edit_classroom_path(classroom) %></td>
-        <td><%= link_to 'Destroy', classroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= stream.name %></td>
+        <td><%= stream.classroom.number %></td>
+        <td><%= link_to 'Show', stream %></td>
+        <td><%= link_to 'Edit', edit_stream_path(stream) %></td>
+        <td><%= link_to 'Destroy', stream, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <br>
 
-<%= link_to 'New Classroom', new_classroom_path %>
+

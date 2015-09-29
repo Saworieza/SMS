@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong></strong>Class:</strong>
+  <%= @stream.classroom.number %>
+</p>
+<p>
   <strong>Name:</strong>
   <%= @stream.name %>
 </p>
-
 <p>
-  <strong>Classroom:</strong>
-  <%= @stream.classroom %>
+  <strong>Teacher:</strong>
+  <%= @stream.teacher.fullname %>
 </p>
 
 <%= link_to 'Edit', edit_stream_path(@stream) %> |

@@ -16,6 +16,7 @@ class StudentsController < ApplicationController
   def new
     @student = Student.new
     @classrooms = Classroom.all
+    @streams = Stream.all
   end
 
   # GET /students/1/edit
@@ -70,6 +71,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:fullname, :birthdate, :gender, :nationality, :form, :stream, :class_teacher, :address, :phone_1, :phone_2, :classroom_id, :email, :town, :county, :image, :adm_no, :adm_date)
+      params.require(:student).permit(:surname, :father, :mother, :guardian, :fullname, :birthdate, :gender, :nationality, :form, :stream_id, :class_teacher, :address, :phone_1, :phone_2, :classroom_id, :email, :town, :county, :image, :adm_no, :adm_date)
     end
 end
