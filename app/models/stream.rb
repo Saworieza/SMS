@@ -1,4 +1,5 @@
 class Stream < ActiveRecord::Base
   belongs_to :classroom #:through=> :teacher
-  belongs_to :teacher
+  has_many :teachers
+  has_many :students
 end

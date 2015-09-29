@@ -6,14 +6,18 @@
 <table>
   <thead>
     <tr>
+      <th>Surname</th>
       <th>Fullname</th>
       <th>Birthdate</th>
       <th>Gender</th>
       <th>Nationality</th>
       <th>Form</th>
       <th>Stream</th>
-      <th>Class teacher</th>
+      <!--<th>Class teacher</th>-->
       <th>Address</th>
+      <th>Father</th>
+      <th>Mother</th>
+      <th>Guardian</th>
       <th>Phone 1</th>
       <th>Phone 2</th>
       <th>Email</th>
@@ -31,12 +35,16 @@
       <tr>
         <td><%= student.surname %></td>
         <td><%= student.fullname %></td>
-        <td><%= student.birthdate %></td>
+        <td><%= student.birthdate.strftime('%d/%b/%Y') %></td>
         <td><%= student.gender %></td>
         <td><%= student.nationality %></td>
-        <td><%= student.form %></td>
-        <td><%= student.stream %></td>
-        <td><%= student.class_teacher %></td>
+        <td><%= student.classroom.number %></td>
+        
+        <!--<td><%= student.form %></td>-->
+        
+        <td><%#= student.stream.name %></td><!-- bring in the color name of the stream here -->
+        
+        <!--<td><%= student.class_teacher %></td>-->
         <td><%= student.address %></td>
         <td><%= student.father %></td>
         <td><%= student.mother %></td>
@@ -49,7 +57,9 @@
         <td><%= image_tag student.image.url(:thumb) %></td>
         <td><%= student.adm_no %></td>
         <td><%= student.adm_date %></td>
-        <td><%= student.classroom.number %></td>
+        <td><%= student.stream %></td><!-- get the stream teacher here -->
+        
+        
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

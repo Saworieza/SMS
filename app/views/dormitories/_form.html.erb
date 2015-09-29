@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :matron %><br>
-    <%= f.text_field :matron %>
+    <%= f.select :teacher_id, Teacher.all.map {|t| [t.fullname, t.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929162554) do
+ActiveRecord::Schema.define(version: 20150929212754) do
 
   create_table "classrooms", force: :cascade do |t|
     t.integer  "number"
@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(version: 20150929162554) do
   create_table "dormitories", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.string   "matron"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "teacher_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 20150929162554) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "teacher_id"
+    t.integer  "student_id"
   end
 
   add_index "streams", ["classroom_id"], name: "index_streams_on_classroom_id"
@@ -125,7 +126,6 @@ ActiveRecord::Schema.define(version: 20150929162554) do
     t.string   "gender"
     t.string   "nationality"
     t.string   "form"
-    t.string   "stream"
     t.string   "class_teacher"
     t.string   "address"
     t.integer  "phone_1"
@@ -194,6 +194,7 @@ ActiveRecord::Schema.define(version: 20150929162554) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "dormitory_id"
   end
 
   create_table "users", force: :cascade do |t|

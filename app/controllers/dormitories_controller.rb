@@ -15,6 +15,7 @@ class DormitoriesController < ApplicationController
   # GET /dormitories/new
   def new
     @dormitory = Dormitory.new
+    @teacher = Teacher.all
   end
 
   # GET /dormitories/1/edit
@@ -69,6 +70,6 @@ class DormitoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dormitory_params
-      params.require(:dormitory).permit(:name, :description, :matron)
+      params.require(:dormitory).permit(:name, :description, :teacher_id)
     end
 end
