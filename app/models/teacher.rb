@@ -4,4 +4,5 @@ class Teacher < ActiveRecord::Base
     
     belongs_to :stream
     belongs_to :dormitory
+    has_many :subjects
 end

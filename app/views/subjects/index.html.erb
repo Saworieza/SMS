@@ -8,7 +8,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Class</th>
+      <th>Abbr</th>
       <th>Teacher</th>
       <th colspan="3"></th>
     </tr>
@@ -18,8 +18,8 @@
     <% @subjects.each do |subject| %>
       <tr>
         <td><%= subject.name %></td>
-        <td><%= subject.classroom %></td>
-        <td><%= subject.teacher %></td>
+        <td><%= subject.abbreviation %></td>
+        <td><%#= subject.teacher %></td>
         <td><%= link_to 'Show', subject %></td>
         <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
         <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>

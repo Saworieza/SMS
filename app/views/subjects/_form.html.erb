@@ -18,12 +18,13 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :class %><br>
-    <%= f.text_field :classroom %>
+    <%= f.label :Subject_abbr %><br>
+    <%= f.text_field :abbreviation %>
   </div>
   <div class="field">
     <%= f.label :teacher %><br>
-    <%= f.text_field :teacher %>
+    <%#= f.text_field :teacher %>
+    <%= f.select :teacher_id, Teacher.all.map {|t| [t.fullname, t.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

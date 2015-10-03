@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002222843) do
+ActiveRecord::Schema.define(version: 20151003062003) do
 
   create_table "classrooms", force: :cascade do |t|
     t.integer  "number"
@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 20151002222843) do
   create_table "disciplines", force: :cascade do |t|
     t.string   "incident"
     t.date     "incident_date"
-    t.string   "student"
-    t.integer  "adm_no"
     t.string   "form"
     t.text     "details"
     t.text     "action_taken"
@@ -41,6 +39,8 @@ ActiveRecord::Schema.define(version: 20151002222843) do
     t.string   "email_address"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "student_id"
+    t.string   "category"
   end
 
   create_table "dormitories", force: :cascade do |t|
@@ -154,14 +154,15 @@ ActiveRecord::Schema.define(version: 20151002222843) do
     t.string   "father"
     t.string   "mother"
     t.string   "guardian"
+    t.integer  "discipline_id"
   end
 
   create_table "subjects", force: :cascade do |t|
     t.string   "name"
-    t.string   "teacher"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "classroom"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "teacher_id"
+    t.string   "abbreviation"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -203,6 +204,7 @@ ActiveRecord::Schema.define(version: 20151002222843) do
     t.datetime "image_updated_at"
     t.integer  "dormitory_id"
     t.string   "gender"
+    t.integer  "subject_id"
   end
 
   create_table "users", force: :cascade do |t|

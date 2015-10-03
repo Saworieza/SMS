@@ -8,13 +8,13 @@
 </p>
 
 <p>
-  <strong>Class:</strong>
-  <%= @subject.classroom %>
+  <strong>Abbr:</strong>
+  <%= @subject.abbreviation %>
 </p>
 
 <p>
   <strong>Teacher:</strong>
-  <%= @subject.teacher %>
+  <%#= @subject.teacher.fullname %><!-- ticket raised. find out whats wrong with this kid. also remember we shall be changing it to take multiple teachers at the same time-->
 </p>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |

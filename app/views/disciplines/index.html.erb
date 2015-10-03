@@ -8,6 +8,7 @@
   <thead>
     <tr>
       <th>Incident</th>
+      <th>Category</th>
       <th>Incident date</th>
       <th>Student</th>
       <th>Adm no</th>
@@ -26,6 +27,7 @@
     <% @disciplines.each do |discipline| %>
       <tr>
         <td><%= discipline.incident %></td>
+        <td><%= discipline.category %></td>
         <td><%= discipline.incident_date %></td>
         <td><%= discipline.student %></td>
         <td><%= discipline.adm_no %></td>

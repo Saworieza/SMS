@@ -17,21 +17,31 @@
     <%= f.label :incident %><br>
     <%= f.text_field :incident %>
   </div>
+  
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :category, ["One","Two","Other"] %>
+  </div>
+  
   <div class="field">
     <%= f.label :incident_date %><br>
     <%= f.date_select :incident_date %>
   </div>
   <div class="field">
     <%= f.label :student %><br>
-    <%= f.text_field :student %>
+    <%#= f.text_field :student %>
+    <%= f.select :student_id, Student.all.map {|s| [s.fullname, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :adm_no %><br>
-    <%= f.number_field :adm_no %>
+    <%#= f.number_field :adm_no %>
+    <%= f.select :student_id, Student.all.map {|s| [s.adm_no, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :form %><br>
-    <%= f.text_field :form %>
+    <%#= f.text_field :form %>
+    <%= f.select :student_id, Student.all.map {|s| [s.classroom_id, s.id]} %>
+    <%= f.select :student_id, Student.all.map {|s| [s.stream_id, s.id]} %>
   </div>
   <div class="field">
     <%= f.label :details %><br>
