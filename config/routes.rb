@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :priorities
   resources :classrooms
   resources :streams
   resources :departments

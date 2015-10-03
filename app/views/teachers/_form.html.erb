@@ -18,6 +18,11 @@
     <%= f.text_field :fullname %>
   </div>
   <div class="field">
+    <%= f.label :gender %><br>
+    <%#= f.text_field :gender %>
+    <%= f.select :gender, ["Male","Female","Other"] %>
+  </div>
+  <div class="field">
     <%= f.label :employer %><br>
     <%= f.text_field :employer %>
   </div>
@@ -31,11 +36,12 @@
   </div>
   <div class="field">
     <%= f.label :birthdate %><br>
-    <%= f.date_select :birthdate %>
+    <%= f.date_select :birthdate, :start_year=>1955,:end_year=>2050 %>
+    <!-- you are older than my system retire -->
   </div>
   <div class="field">
     <%= f.label :marital_status %><br>
-    <%= f.text_field :marital_status %>
+    <%= f.select :marital_status, ["Single","Complicated","Married","Divorced","Separated","Widowed"] %>
   </div>
   <div class="field">
     <%= f.label :nationality %><br>

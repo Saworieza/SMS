@@ -8,6 +8,7 @@
   <thead>
     <tr>
       <th>Fullname</th>
+      <th>Gender</th>
       <th>Employer</th>
       <th>Employee number</th>
       <th>Employment date</th>
@@ -32,6 +33,7 @@
     <% @teachers.each do |teacher| %>
       <tr>
         <td><%= teacher.fullname %></td>
+        <td><%= teacher.gender %></td>
         <td><%= teacher.employer %></td>
         <td><%= teacher.employee_number %></td>
         <td><%= teacher.employment_date %></td>

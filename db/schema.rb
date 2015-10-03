@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929212754) do
+ActiveRecord::Schema.define(version: 20151002222843) do
 
   create_table "classrooms", force: :cascade do |t|
     t.integer  "number"
@@ -109,6 +109,12 @@ ActiveRecord::Schema.define(version: 20150929212754) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "priorities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "streams", force: :cascade do |t|
     t.string   "name"
     t.integer  "classroom_id"
@@ -168,6 +174,7 @@ ActiveRecord::Schema.define(version: 20150929212754) do
     t.string   "assignedTo"
     t.string   "state"
     t.string   "attachment"
+    t.integer  "priority_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -195,6 +202,7 @@ ActiveRecord::Schema.define(version: 20150929212754) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "dormitory_id"
+    t.string   "gender"
   end
 
   create_table "users", force: :cascade do |t|
